@@ -39,6 +39,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="PB3-yU-dGZ" appends="YES" id="rqi-LQ-1xn"/>
+                            <outletCollection property="gestureRecognizers" destination="7cu-7w-sje" appends="YES" id="PWR-D6-W4h"/>
+                            <outletCollection property="gestureRecognizers" destination="Vp8-GC-J4x" appends="YES" id="J9H-1R-cw0"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="OK3-SG-4z0"/>
@@ -52,6 +54,16 @@
                         <action selector="tapGesture:" destination="BYZ-38-t0r" id="LJ1-Rt-Pga"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="7cu-7w-sje" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="rightSwipeGesture:" destination="BYZ-38-t0r" id="fae-GB-w1e"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Vp8-GC-J4x" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="leftSwipeGesture:" destination="BYZ-38-t0r" id="u7r-mT-Kfd"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-188" y="78.710644677661179"/>
         </scene>

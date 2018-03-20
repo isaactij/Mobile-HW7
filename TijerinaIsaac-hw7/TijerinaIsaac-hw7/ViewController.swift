@@ -24,6 +24,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func rightSwipeGesture(_ sender: Any) {
+        let newPosition:Int = width
+        left = true
+        UIView.animate(withDuration: 0.75, delay: 0, options: .curveLinear, animations: {
+            self.label.frame.origin.x = CGFloat(newPosition)
+        })
+    }
+    
+    @IBAction func leftSwipeGesture(_ sender: Any) {
+        let newPosition:Int = -98
+        left = false
+        UIView.animate(withDuration: 0.75, delay: 0, options: .curveLinear, animations: {
+            self.label.frame.origin.x = CGFloat(newPosition)
+        })
+    }
+    
     @IBAction func tapGesture(_ sender: Any) {
         let xPostition:Int = Int(label.frame.origin.x)
         if left {
@@ -44,9 +60,7 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
                 self.label.frame.origin.x = CGFloat(newPosition)
             })
-            
         }
-        
     }
 }
 
