@@ -61,6 +61,9 @@ class ViewController: UIViewController{
             if newPosition < 0 {
                 newPosition = 0
                 left = false
+            } else if newPosition > width - 98 {
+                newPosition = width - 98
+                left = false
             }
             //Animates movement
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
@@ -72,6 +75,9 @@ class ViewController: UIViewController{
             //Chesk to see if new position is ouside the screeen and if so changes it
             if newPosition > width - 98 {
                 newPosition = width - 98
+                left = true
+            } else if newPosition - 98 < 0 {
+                newPosition = 0
                 left = true
             }
             //Animates movement
